@@ -6,3 +6,13 @@ $light-color: #f4f4f4;
 $medium-color: #ccc;
 $dark-color: #333;
 $bg-image: url('https://images.unsplash.com/photo-1703969083653-da62f9ea70af?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+
+// Set text color
+
+@function set-text-color($color) {
+    @if(lightness($color) > 50) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
